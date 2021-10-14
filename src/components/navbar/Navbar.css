@@ -1,0 +1,182 @@
+.NavClass{
+    background: #181b52;
+    height:80px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    font-size: 1.2rem;
+    
+   
+
+}
+
+.Logo{
+    
+    cursor:pointer;
+    margin-left: 10px;
+    color:#ED5E93;
+    text-decoration:none;
+    font-size: 2rem;
+    
+}
+
+.nav-menu{
+    display: grid;
+    text-decoration: none;
+    grid-template-columns: repeat(5,auto);
+    list-style: none;
+    grid-gap: 10px;
+    width:50vw;
+    text-align: center;
+    justify-content: end;
+    margin-right: 2.3rem;
+
+}
+
+.nav-links{
+   
+    text-decoration:none;
+    color:#ED5E93;
+    padding: 0.5rem 1rem ;
+}
+.nav-links:hover{
+    background-color: #FFF3FA;
+    border-radius: 4px;
+    transition: all 0.2s ease-out ;
+}
+.activelink{
+    background-color: #FFF3FA;
+    border-radius: 4px;
+    transition: all 0.2s ease-out ;
+}
+.nav-links-mobile{
+    display: none;
+}
+
+.button{
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #ED5E93 ;
+    color:#FFF3FA;
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto;
+    display: block;
+    text-decoration: none;
+    padding: 7px 11px;
+    text-align: center;
+    transition: all 0.3s ease-out ;
+    
+
+
+}
+.Menu-Icon{
+    display: none;
+}
+.button:hover{
+    background: #FFF3FA;
+    color:#ED5E93 ;
+
+}
+
+
+@media  screen and (max-width:900px) {
+    .NavClass {
+        position: relative;
+    }
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 510px;
+        position: absolute;
+        top:80px;
+        left:-100%;
+        opacity: 1;
+        transition: all 0.5s ease ;
+
+  
+
+    }
+    .nav-menu.active{
+        background: #FFF3FA;
+        left: 0;
+        opacity:1;
+        transition: all 0.5s ease;
+        z-index: 20;
+    }
+    .nav-links{
+        text-align:center;
+        padding: 2rem;
+        width:100%; 
+        display: table;
+
+    }
+    .nav-links:hover{
+        background-color: #28161C;
+        border-radius: 0;
+    }
+
+    .Logo{
+        position: absolute;
+        top: 0;
+        left:0;
+        transform: translate(25%,50%);
+
+
+    }
+    .button{
+        position: absolute;
+        transform: translate(80%);
+    }
+    .Menu-Icon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%,60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .nav-links-mobile{
+        display: block;
+        text-align: center;
+        padding: 1.2rem;
+        margin:1rem auto;
+        width: 80%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background: #ED5E93 ;
+        color:#FFF3FA;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+
+    }
+    .nav-links-mobile:hover{
+        background: #28161C;
+    color:#ED5E93 ;
+
+    }
+
+    .button:hover{
+        background: rgba(0,212,255,1);
+        transition: 250ms;
+    }
+    .button{
+        display: none;
+    }
+
+    .fa-times{
+        color:#FFF3FA;
+    }
+    .fa-bars{
+        color:#FFF3FA;
+    }
+    
+
+
+ 
+    
+}
